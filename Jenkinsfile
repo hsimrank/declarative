@@ -10,11 +10,11 @@ pipeline{
     options {
         buildDiscarder(logRotator(numToKeepStr: '3')) 
     }
-    parameters { 
-        choice(name: 'DEPLOY_ENV', 
-        choices: ['UAT1', 'UAT2', 'UAT3'], 
-        description: 'Select the env you want to deploy') 
-    }
+    // parameters { 
+    //     choice(name: 'DEPLOY_ENV', 
+    //     choices: ['UAT1', 'UAT2', 'UAT3'], 
+    //     description: 'Select the env you want to deploy') 
+    // }
     stages {
         stage('Compile'){
             steps {
